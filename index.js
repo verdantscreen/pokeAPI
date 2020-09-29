@@ -8,7 +8,7 @@ const section = document.querySelector("section");
 pokeForm.addEventListener("submit", fetchPoke);
 function fetchPoke(e) {
   e.preventDefault();
-  let pokeName = pokeNumber.value;
+  let pokeName = pokeNumber.value.toLowerCase();
   fetch(`${baseURL}${pokeName}`)
     .then(function (response) {
       return response.json();
